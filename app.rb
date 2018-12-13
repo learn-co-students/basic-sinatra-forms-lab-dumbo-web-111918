@@ -6,7 +6,11 @@ class App < Sinatra::Base
     erb :newteam
   end
 
-  # so after creating the GET request from the newteam.erb file, we need a POST request to save the info and show it
+  # so after creating the GET request from the
+  # newteam.erb file, we need a POST request to
+  # save the info and show it
+  # the POST request is used on the same file '/newteam'
+  # but it is displayed on a new erb file called '/team'
   post '/newteam' do
     @name = params[:name]
     @coach = params[:coach]
